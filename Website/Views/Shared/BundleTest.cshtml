@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+<title>Sitecore Bundles Test Page</title>
+
+@Styles.Render("~/Bundles/StyleSheet")
+
+</head>
+<body>
+
+<div>@Html.Sitecore().Placeholder("main")</div>
+
+@Scripts.Render("~/Bundles/JavaScript")
+
+</body>
+</html>
