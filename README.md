@@ -1,14 +1,14 @@
 TC.Sitecore.Bundles
 ===================
 
-An example project showing the modifications required to hook Microsoft.AspNet.Optimization into Sitecore.
+An example project showing the modifications required to hook Microsoft.AspNet.Web.Optimization into Sitecore.
 
 ===================
 
 <H2>Instructions</H2>
 Steps required to add Bundling of scripts and styles.
 
-1. Install Microsoft.AspNet.Optimization NuGet package.
+1. Install Microsoft.AspNet.Web.Optimization NuGet package.
 2. Write your BundleConfig.cs
 https://github.com/gothandy/TC.Sitecore.Bundles/blob/master/Website/BundleConfig.cs
 
