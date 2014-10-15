@@ -24,7 +24,8 @@ https://github.com/gothandy/TC.Sitecore.Bundles/blob/master/Website/Views/Web.co
 https://github.com/gothandy/TC.Sitecore.Bundles/blob/master/Website/Views/Shared/BundleTest.cshtml
 
 ===================
-<H2>Issues</H2>
+Sitecore 7.2 rev. 140526 used for testing.
 
-- NuGet adds a reference to WebGrease to your Web.Config this can be lost if your project is outside Sitecore folder.
-- Adding /Bundle to IgnoreUrlPrefixes easily broken by other modules/upgrades.
+See GitHub issues for more info.
+https://github.com/gothandy/TC.Sitecore.Bundles/issues
+
