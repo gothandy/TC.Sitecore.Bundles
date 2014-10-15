@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website", "Website\Website.csproj", "{18470023-0B28-4925-8A55-B2287FC3D469}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TC.Sitecore.Bundles.Test", "TC.Sitecore.Bundles.Test\TC.Sitecore.Bundles.Test.csproj", "{0B8991E7-9E32-4C5E-BA27-B83B57FCDD53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TC.Sitecore.Bundles", "TC.Sitecore.Bundles\TC.Sitecore.Bundles.csproj", "{8B6B0B06-7CF7-49D2-AB19-D6F4CCFA1756}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{18470023-0B28-4925-8A55-B2287FC3D469}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18470023-0B28-4925-8A55-B2287FC3D469}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18470023-0B28-4925-8A55-B2287FC3D469}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B8991E7-9E32-4C5E-BA27-B83B57FCDD53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B8991E7-9E32-4C5E-BA27-B83B57FCDD53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B8991E7-9E32-4C5E-BA27-B83B57FCDD53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B8991E7-9E32-4C5E-BA27-B83B57FCDD53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B6B0B06-7CF7-49D2-AB19-D6F4CCFA1756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B6B0B06-7CF7-49D2-AB19-D6F4CCFA1756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B6B0B06-7CF7-49D2-AB19-D6F4CCFA1756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B6B0B06-7CF7-49D2-AB19-D6F4CCFA1756}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

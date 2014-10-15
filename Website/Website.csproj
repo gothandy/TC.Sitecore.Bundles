@@ -12,7 +12,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TC.Sitecore.Bundles</RootNamespace>
-    <AssemblyName>TC.Sitecore.Bundles</AssemblyName>
+    <AssemblyName>Website</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
@@ -108,7 +108,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BundleConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -119,11 +118,22 @@
     <Content Include="Views\Web.config" />
     <Content Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\TC.Sitecore.Bundles.Test\TC.Sitecore.Bundles.Test.csproj">
+      <Project>{0b8991e7-9e32-4c5e-ba27-b83b57fcdd53}</Project>
+      <Name>TC.Sitecore.Bundles.Test</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TC.Sitecore.Bundles\TC.Sitecore.Bundles.csproj">
+      <Project>{8b6b0b06-7cf7-49d2-ab19-d6f4ccfa1756}</Project>
+      <Name>TC.Sitecore.Bundles</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
     <Content Include="App_Config\Include\TC.Sitecore.Bundles.config" />
     <Content Include="Views\Shared\BundleTest.cshtml" />
+    <Content Include="App_Config\Include\TC.Sitecore.Bundles.Config1.config" />
+    <Content Include="App_Config\Include\TC.Sitecore.Bundles.Config2.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -147,8 +157,6 @@
           <DevelopmentServerPort>55975</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://tc.sitecore.bundles/</IISUrl>
-          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
-          <IISAppRootUrl>http://tc.sitecore.bundles/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
