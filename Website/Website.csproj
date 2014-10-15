@@ -119,6 +119,12 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Config\Include\TC.Sitecore.Bundles.config" />
+    <Content Include="Views\Shared\BundleTest.cshtml" />
+    <Content Include="App_Config\Include\TC.Sitecore.Bundles.Config1.config" />
+    <Content Include="App_Config\Include\TC.Sitecore.Bundles.Config2.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\TC.Sitecore.Bundles.Test\TC.Sitecore.Bundles.Test.csproj">
       <Project>{0b8991e7-9e32-4c5e-ba27-b83b57fcdd53}</Project>
       <Name>TC.Sitecore.Bundles.Test</Name>
@@ -127,19 +133,6 @@
       <Project>{8b6b0b06-7cf7-49d2-ab19-d6f4ccfa1756}</Project>
       <Name>TC.Sitecore.Bundles</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Web.config" />
-    <Content Include="App_Config\Include\TC.Sitecore.Bundles.config" />
-    <Content Include="Views\Shared\BundleTest.cshtml" />
-    <Content Include="App_Config\Include\TC.Sitecore.Bundles.Config1.config" />
-    <Content Include="App_Config\Include\TC.Sitecore.Bundles.Config2.config" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

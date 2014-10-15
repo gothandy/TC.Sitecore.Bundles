@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>TC.Sitecore.Bundles</id>
+    <version>$version$</version>
+    <title>True Clarity - Sitecore Bundles</title>
+    <authors>True Clarity</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Sitecore pipeline for implementing Microsoft.AspNet.Web.Optimization bundles.</description>
+  </metadata>
+  <files>
+    <file src="..\Website\App_Config\Include\TC.Sitecore.Bundles.config" target="content\App_Config\Include\TC.Sitecore.Bundles.config"/>
+  </files>
+</package>
