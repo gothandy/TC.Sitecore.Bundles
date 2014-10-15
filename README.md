@@ -1,31 +1,62 @@
 TC.Sitecore.Bundles
 ===================
 
-An example project showing the modifications required to hook Microsoft.AspNet.Web.Optimization into Sitecore.
+This project creates a new pipeline within Sitecore. This pipeline allows developers to add one or more BundleConfig classes during Initialization. The aim is to be able to package together a SubLayout with Style and Script dependancies without needing to touch the main layout. Using the `Microsoft.AspNet.Web.Optimization` framework.
 
 ===================
 
-<H2>Instructions</H2>
-Steps required to add Bundling of scripts and styles.
+#Instructions
 
-1. Install Microsoft.AspNet.Web.Optimization NuGet package.
-2. Write your BundleConfig.cs
-https://github.com/gothandy/TC.Sitecore.Bundles/blob/master/Website/BundleConfig.cs
+Begin by installing the NuGet package. Check WebGrease is added to `Web.config` as a `dependantAssemby`.
 
-3. Add this to the Sitecoe initialization pipeline.
-4. Add /Bundle to your IgnoreUrlPrefixes.
-https://github.com/gothandy/TC.Sitecore.Bundles/blob/master/Website/App_Config/Include/TC.Sitecore.Bundles.config
+```Install-Package TC.Sitecore.Bundles```
 
+Add a class and use the supplied GetOrAdd methods.
 
-5. Add namespace to Views/Web.Config.
-https://github.com/gothandy/TC.Sitecore.Bundles/blob/master/Website/Views/Web.config
+```
+using Sitecore;
 
-6. Edit your views to use Bundles.
-https://github.com/gothandy/TC.Sitecore.Bundles/blob/master/Website/Views/Shared/BundleTest.cshtml
+namespace TC.Sitecore.Bundles
+{
+    public class BundleConfig1
+    {
+        [UsedImplicitly]
+        public virtual void Process(BundlesPipelineArgs bundles)
+        {
+            bundles.GetOrAddScriptBundle("~/bundles/JavaScript").Include(
+                "~/Scripts/JavaScript1.js");
+            bundles.GetOrAddStyleBundle("~/bundles/StyleSheet").Include(
+                "~/Content/StyleSheet1.css");
+        }
+    }
+}
+```
+
+Create a config file.
+
+```
+<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
+  <sitecore>
+    <pipelines>
+      <bundleConfig>
+        <processor type="TC.Sitecore.Bundles.BundleConfig1, TC.Sitecore.Bundles.Test" />
+      </bundleConfig>
+    </pipelines>
+  </sitecore>
+</configuration>
+```
+
+When working in your Layout use the usual format.
+
+```
+@Styles.Render("~/Bundles/StyleSheet")
+@Scripts.Render("~/Bundles/JavaScript")
+```
+
+Dont' forget the namespace reference.
+
+`<add namespace="System.Web.Optimization" />`
 
 ===================
-Sitecore 7.2 rev. 140526 used for testing.
-
-See GitHub issues for more info.
-https://github.com/gothandy/TC.Sitecore.Bundles/issues
+Tested with Sitecore 7.2 rev. 140526
 
