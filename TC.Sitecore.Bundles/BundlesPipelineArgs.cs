@@ -12,7 +12,7 @@ namespace TC.Sitecore.Bundles
             this.bundles = bundles;
         }
 
-        public BundleCollection Bundles
+        public BundleCollection BundleCollection
         {
             get
             {
