@@ -7,8 +7,10 @@ namespace TC.Sitecore.Bundles
         [UsedImplicitly]
         public virtual void Process(BundlesPipelineArgs bundles)
         {
-            bundles.GetOrAddScriptBundle("~/bundles/JavaScript").Include("~/Scripts/JavaScript1.js");
-            bundles.GetOrAddStyleBundle("~/bundles/StyleSheet").Include("~/Content/StyleSheet1.css");
+            BundlesHelper helper = new BundlesHelper(bundles.Bundles);
+
+            helper.GetOrAddScriptBundle("~/bundles/JavaScript").Include("~/Scripts/JavaScript1.js");
+            helper.GetOrAddStyleBundle("~/bundles/StyleSheet").Include("~/Content/StyleSheet1.css");
         }
     }
 }

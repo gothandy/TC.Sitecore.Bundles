@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BundlesHelper.cs" />
     <Compile Include="BundlesInitialize.cs" />
     <Compile Include="BundlesPipelineArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
