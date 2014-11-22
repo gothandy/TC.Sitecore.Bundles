@@ -1,6 +1,9 @@
+# NuGet
+
+packages/
+
 # Project specific.
 
-TC.Sitecore.Bundles/TC.Sitecore.Bundles.*.nupkg
 Website/Web.config
 Website/Web.Debug.config
 Website/Web.Release.config
